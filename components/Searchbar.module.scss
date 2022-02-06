@@ -1,0 +1,56 @@
+@use "variables" as vars;
+
+.container {
+    $text-color: #141414;
+    padding: 1em 3em;
+    border-radius: 3em;
+    box-shadow: 0 0 8px 1px #63606055;
+    background-color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    color: $text-color;
+    gap: 1em;
+
+    svg {
+        $size: 2rem;
+        display: inline-block;
+        height: $size;
+        width: $size;
+        flex-shrink: 0;
+        flex-basis: $size;
+    }
+    
+
+    input {
+        outline: none;
+        border: none;
+        height: 3rem;
+        width: 100%;
+        display: block;
+        flex-grow: 1;
+        font-size: 180%;
+
+        // &::placeholder {
+        //     font-size: 180%;
+        // }
+        
+    }
+}
+
+
+@media screen and (max-width: vars.$mobile-breakpoint) {
+    .container {
+        padding: 1em;
+        
+        input {
+            font-size: 140%;
+
+            // &::placeholder {
+            //     font-size: 140%;
+            // }
+        }
+    }
+
+}
+    

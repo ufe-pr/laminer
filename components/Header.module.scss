@@ -1,0 +1,42 @@
+@use "./variables.scss" as vars;
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 5em;
+  align-items: center;
+  padding: 4rem 3em;
+}
+
+.logo {
+  $size: 2em;
+  $color: #fff;
+  line-height: 1;
+  svg {
+    height: $size / 2;
+    width: $size / 2;
+    
+    path {
+        fill: $color;
+    }
+  }
+
+  font-size: $size;
+  color: $color;
+}
+
+
+
+@media screen and (max-width: vars.$mobile-breakpoint) {
+    .container {
+        padding: 2em 1em;
+        // background-position: center;
+        // gap: 1em;
+    }
+    
+}
