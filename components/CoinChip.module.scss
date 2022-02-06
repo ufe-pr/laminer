@@ -1,0 +1,40 @@
+@use "./variables" as vars;
+
+.container {
+  padding: 1.2em;
+  background-color: #fff;
+  border-radius: calc(3em);
+  display: inline-flex;
+  line-height: 1;
+  flex-shrink: 0;
+  gap: 1em;
+  font-size: 150%;
+
+  h3 {
+    line-height: 1;
+    margin-bottom: 0.5em;
+  }
+
+  span {
+    opacity: 0.7;
+  }
+
+  img {
+    $size: 3rem;
+    height: $size;
+    width: $size;
+  }
+}
+
+@media screen and (max-width: vars.$mobile-breakpoint) {
+  .container {
+    padding: 1em;
+    font-size: 100%;
+
+    img {
+      $size: 2rem;
+      height: $size;
+      width: $size;
+    }
+  }
+}
